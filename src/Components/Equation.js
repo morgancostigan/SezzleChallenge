@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 
 
-
-class ClearButton extends Component {
-    render() {
-
-        let equation = this.props.equation;
+class Equation extends Component{
+    render(){
+        let displayEquation = this.props.equation;
+        // let displayEquation = "redwood forest";
+        console.log('props', this.props.equation);
 
         return (
             <p>
-                {this.props.equation}
+                {displayEquation}
             </p>
         )
     }
-}//end ClearButton
+    
+}//end Equation
 
-export default ClearButton;
+export default Equation;

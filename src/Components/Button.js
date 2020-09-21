@@ -5,9 +5,7 @@ import '../App.css';
 class Button extends Component {
     render() {
         return (
-            // <div>
-                <button onClick={e => this.props.onClick(e.target.name)}></button>
-            // </div>
+        <button onClick={e => this.props.onClick(e.target.name)}>{this.props.name}</button>
         )
     }
 }//end Button
