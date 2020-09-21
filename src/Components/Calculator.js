@@ -12,29 +12,25 @@ class Calculator extends Component {
             <div className="calculator">
 
                 <Button name="(">(</Button>
-                <button name=")">)</button>
-                <button name="%">%</button>
-                <button name="C">C</button>
-
-                <button name="1">1</button>
-                <button name="2">2</button>
-                <button name="3">3</button>
-                <button name="/">/</button>
-
-                <button name="4">4</button>
-                <button name="5">5</button>
-                <button name="6">6</button>
-                <button name="x">x</button>
-
-                <button name="7">7</button>
-                <button name="8">8</button>
-                <button name="9">9</button>
-                <button name="-">-</button>
-
-                <button name="0">0</button>
-                <button name=".">.</button>
-                <button name="=">=</button>
-                <button name="+">+</button>
+                <Button name=")">(</Button>
+                <Button name="%">(</Button>
+                <Button name="C">(</Button>
+                <Button name="1">(</Button>
+                <Button name="2">(</Button>
+                <Button name="3">(</Button>
+                <Button name="/">(</Button>
+                <Button name="4">(</Button>
+                <Button name="5">(</Button>
+                <Button name="6">(</Button>
+                <Button name="x">(</Button>
+                <Button name="7">(</Button>
+                <Button name="8">(</Button>
+                <Button name="9">(</Button>
+                <Button name="-">(</Button>
+                <Button name="0">(</Button>
+                <Button name=".">(</Button>
+                <Button name="=">(</Button>
+                <Button name="+">(</Button>
 
             </div>
 
