@@ -13,12 +13,17 @@ class App extends Component {
     }
   }//end constructor
 
+  handleClick = buttonName => {
+    console.log(buttonName);
+  }
+
+
 
 
   render() {
     return (
       <div className="App">
-        <Calculator />
+        <Calculator onClick={this.handleClick}/>
         <Equation equation={this.state.equation}/>
 
       </div>
