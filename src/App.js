@@ -5,14 +5,15 @@ import Calculator from './Components/Calculator';
 import Equation from './Components/Equation';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      tempEquation: "",
-      equation: "pine forest",
-      calculations: []
-    }
-  }//end constructor
+  componentDidMount(){
+    //import previous calculations and set to state
+  }
+
+  state = {
+    tempEquation: "",
+    equation: "pine forest",
+    calculations: []
+  }
 
   clearEquation() {
     this.setState({
@@ -28,9 +29,17 @@ class App extends Component {
 
   runEquation(){
     //1 set as tempEquation
+    this.setState({
+      tempEquation: this.state.equation,
     //2 evaluate the equation
-    //3 display as "tempEquation" = "equation"
-    //4 save tempEquation = equation as calculation
+      equation: (eval(this.state.equation))
+    }, () => {
+      console.log("state:", this.state);  
+    });
+    // console.log("state:", this.state);    
+
+    //3 display as "tempEquation=equation"
+    //4 save "tempEquation=equation" as calculation
     //5 send calculation to a more permanent save (json or db)
   }
 
@@ -45,10 +54,7 @@ class App extends Component {
     } else {
       this.updateEquation(buttonName)
     }
-  }
-
-
-
+  }//end handleClick
 
   render() {
     return (
