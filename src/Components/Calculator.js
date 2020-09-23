@@ -18,7 +18,9 @@ class Calculator extends Component {
 
                 <button name="(" onClick={e => this.props.onClick(e.target.name)}>(</button>
                 <button name=")" onClick={e => this.props.onClick(e.target.name)}>)</button>
-                <button name="%" onClick={e => this.props.onClick(e.target.name)}>%</button>
+                <button name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>
+                {/* come back to percentage if time allows and replace CE */}
+                {/* <button name="%" onClick={e => this.props.onClick(e.target.name)}>%</button> */}
                 <button name="C" onClick={e => this.props.onClick(e.target.name)}>C</button>
                 <button name="1" onClick={e => this.props.onClick(e.target.name)}>1</button>
                 <button name="2" onClick={e => this.props.onClick(e.target.name)}>2</button>
