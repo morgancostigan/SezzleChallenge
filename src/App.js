@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Calculator from './Components/Calculator';
 import Equation from './Components/Equation';
+import Calculation from './Components/Calculation';
 
 class App extends Component {
   componentDidMount(){
@@ -11,9 +12,7 @@ class App extends Component {
 
   state = {
     answer: "",
-    tempEquation: "",
-    equation: "pine forest",
-    calculation: "",
+    equation: "",
     calculations: []
   }
 
@@ -60,15 +59,19 @@ class App extends Component {
   }//end runEquation
 
   setCalc(solution){ 
-    this.setState({
-      calculations: [`${this.state.equation}=${solution}`].concat(this.state.calculations)
-    })
-    console.log('state2:', this.state);
+    if(this.state.calculations.length == 10){
+      this.setState({
+        calculations: [`${this.state.equation}=${solution}`].concat(this.state.calculations.slice(0, -1)),
+      })
+    } else {
+      this.setState({
+        calculations: [`${this.state.equation}=${solution}`].concat(this.state.calculations)
+      })
+    }
   }//end setCalc
 
   handleClick = buttonName => {
-    console.log(buttonName);
-
+    // console.log(buttonName);
     if(buttonName === "C"){
       this.clearEquation()
     } else if(buttonName === "CE"){
@@ -85,6 +88,7 @@ class App extends Component {
       <div className="App">
         <Calculator onClick={this.handleClick}/>
         <Equation equation={this.state.equation} answer={this.state.answer}/>
+        <Calculation calcs={this.state.calculations}/>
 
       </div>
     );

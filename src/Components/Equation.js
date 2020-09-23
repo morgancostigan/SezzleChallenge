@@ -13,7 +13,8 @@ class Equation extends Component{
             display = displayEquation
         } else {
             display = displayAnswer
-        }
+        }//end IF
+     
         return (
             <p>
                 {display}
