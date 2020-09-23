@@ -6,6 +6,12 @@ FlexView (for arranging buttons in calculator)
 Material UI (for initial styles)
 JSON Server (for emulating a DB in JSON)
 Lowdb (for making calls to the JSON server)
+MongoDB 
+    (
+        brew services start mongodb-community@4.4
+        brew services stop mongodb-community@4.4 
+    )
+Axios (for making DB calls from the front end)
 
 
 

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Calculator from './Components/Calculator';
 import Equation from './Components/Equation';
@@ -55,7 +54,7 @@ class App extends Component {
       answer: solution,
     })
     this.setCalc(solution)
-    console.log('state:', this.state);
+    // console.log('state:', this.state);
   }//end runEquation
 
   setCalc(solution){ 

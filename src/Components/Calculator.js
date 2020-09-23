@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import Grid from '@material-ui/core/Grid';
 import FlexView from 'react-flexview';
-import Button from './Button';
-import CalcButton from './CalcButton';
-import ClearButton from './ClearButton';
-
-
-
-
 
 class Calculator extends Component {
 

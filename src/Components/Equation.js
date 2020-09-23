@@ -8,7 +8,7 @@ class Equation extends Component{
         let display;
         console.log('props', this.props.equation);
 
-        //this headache right here
+        //this headache right here is where I learned about primitives
         if(typeof displayAnswer !== "number" ){
             display = displayEquation
         } else {
