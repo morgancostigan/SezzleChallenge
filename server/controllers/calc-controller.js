@@ -16,9 +16,7 @@ createCalcs = (req, res) => {
         return res.status(400).json({ success: false, error: err })
     }
 
-    // console.log('wreck dat body:', req.body);
-    // console.log("type of wreckBODYchalk:", typeof req.body.calcs)
-    // console.log('loggin` calcs:', calcs);
+
     
     calcs
         .save()
@@ -35,6 +33,10 @@ createCalcs = (req, res) => {
                 message: 'Calculations not created!',
             })
         })
+
+    // console.log('wreck dat body:', req.body);
+    // console.log("type of wreckBODYchalk:", typeof req.body.calcs)
+    // console.log('loggin` calcs:', calcs);
 }
 
 updateCalcs = async (req, res) => {

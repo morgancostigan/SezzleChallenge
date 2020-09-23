@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import api from './api';
 import Calculator from './Components/Calculator';
 import Equation from './Components/Equation';
 import Calculation from './Components/Calculation';
@@ -7,12 +8,22 @@ import Calculation from './Components/Calculation';
 class App extends Component {
   componentDidMount(){
     //import previous calculations and set to state
+    this.getPrevCalcs();
   }
 
   state = {
+    id: "5f6bbd9e7eb1228021b285c0",
     answer: "",
     equation: "",
     calculations: []
+  }
+
+  getPrevCalcs = async () => {
+    console.log('this.state.id:', this.state.id);
+    
+    const prevCalcs = await api.getCalc(this.state.id)
+    console.log('calcs:', prevCalcs);
+    
   }
 
   clearEquation() {
