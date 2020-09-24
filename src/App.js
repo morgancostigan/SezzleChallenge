@@ -19,12 +19,13 @@ class App extends Component {
   }
 
   getPrevCalcs = async () => {
-    console.log('this.state.id:', this.state.id);
-    
+    // console.log('this.state.id:', this.state.id);
     const prevCalcs = await api.getCalc(this.state.id)
-    console.log('calcs:', prevCalcs);
-    
-  }
+      this.setState({
+        calculations: prevCalcs.data.data.calcs
+      })
+    // console.log('calcs:', prevCalcs.data.data.calcs);
+  }//end getPrevCalcs
 
   clearEquation() {
     this.setState({

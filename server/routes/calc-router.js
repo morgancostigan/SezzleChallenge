@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.post('/calcs', CalcCtrl.createCalcs)
 router.put('/calcs/:id', CalcCtrl.updateCalcs)
-router.get('/calcs', CalcCtrl.getCalcs)
+router.get('/calcs/:id', CalcCtrl.getCalcsById)
 
 module.exports = router
 

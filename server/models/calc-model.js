@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Calcs = new Schema(
     {
-        calcs: [String]
+        calcs: { type: [String], required: true }
     }
 )
 
