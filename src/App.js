@@ -1,3 +1,4 @@
+require('dotenv').config();
 import React, {Component} from 'react';
 import './App.css';
 import api from './api';
