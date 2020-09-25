@@ -1,10 +1,11 @@
-require('dotenv').config();
+
 import React, {Component} from 'react';
 import './App.css';
 import api from './api';
 import Calculator from './Components/Calculator';
 import Equation from './Components/Equation';
 import Calculation from './Components/Calculation';
+require('dotenv').config();
 
 class App extends Component {
   componentDidMount(){
