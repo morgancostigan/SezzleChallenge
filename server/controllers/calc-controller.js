@@ -81,14 +81,14 @@ createCalcs = (req, res) => {
 // }//end updateCalcs
 
 updateCalcs = async (req, res) => {
-    const replacement = req.body
+    const replacement = {calcs: req.body}
     const query = req.params.id;
-    const options = { "returnNewDocument": false };
+    const options = { "returnNewDocument": true };
+    let updatedDocument;
 
     console.log('BODY!!!', replacement);
     console.log('PARAMS!!!', req.params);
     
-
     if (!replacement) {
         return res.status(400).json({
             success: false,
@@ -103,11 +103,10 @@ updateCalcs = async (req, res) => {
             } else {
                 console.log("No document matches the provided query.")
             }
-            return updatedDocument
+            return updatedDocument            
         })
-        .catch(err => console.error(`Failed to find and replace document: ${err}`))
-
-    console.log('ROKKEN');
+        .catch(err => console.error(`Failed to find and replace document: ${err}`)
+    )
     
 }//end updateCalcs
 
