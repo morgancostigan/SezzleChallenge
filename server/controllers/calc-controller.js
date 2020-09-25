@@ -81,6 +81,7 @@ createCalcs = (req, res) => {
 // }//end updateCalcs
 
 updateCalcs = async (req, res) => {
+    //put the calcs key here to match the schema
     const replacement = {calcs: req.body}
     const query = req.params.id;
     const options = { "returnNewDocument": true };

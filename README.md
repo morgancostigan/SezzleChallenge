@@ -3,15 +3,12 @@ Basic Calculator Code Challenge for Sezzle
 
 React
 FlexView (for arranging buttons in calculator)
-Material UI (for initial styles)
-JSON Server (for emulating a DB in JSON)
-Lowdb (for making calls to the JSON server)
 MongoDB 
     (
         brew services start mongodb-community@4.4
         brew services stop mongodb-community@4.4 
     )
-Axios (for making DB calls from the front end)
+node.js (for making DB calls from the front end)
 
 calcs._id: 5f6bbd9e7eb1228021b285c0
 
