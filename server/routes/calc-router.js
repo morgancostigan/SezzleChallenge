@@ -5,9 +5,9 @@ const CalcCtrl = require('../controllers/calc-controller')
 
 const router = express.Router()
 
-router.post('/calcs', CalcCtrl.createCalcs)
-router.put('/calcs/:id', CalcCtrl.updateCalcs)
-router.get('/calcs/:id', CalcCtrl.getCalcsById)
+router.post('/cal-cal-cal', CalcCtrl.createCalcs)
+router.put('/cal-cal-cal/:id', CalcCtrl.updateCalcs)
+router.get('/cal-cal-cal/:id', CalcCtrl.getCalcsById)
 
 module.exports = router
 
