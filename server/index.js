@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require("cors");
 const apiPort = process.env.PORT || 4000;
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 // const PORT = 4000;
 const db = require('./db');
 const calcRouter = require('./routes/calc-router');
